@@ -439,7 +439,7 @@
         "metadata": {
           "cta": "Разобрать один критичный flow",
           "url": "/",
-          "description": "Довожу критичные части AI-продуктов и backend-систем до production: payments, realtime, observability и надёжные workflows.",
+          "description": "Стабилизирую AI-продукты и backend-системы перед запуском: payments, realtime, observability и надёжные workflows.",
           "title": "AI Product & Critical Systems Engineering",
           "offer": "Платная диагностика критичного flow"
         },
