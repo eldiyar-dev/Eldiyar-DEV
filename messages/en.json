@@ -1,0 +1,460 @@
+{
+  "cv": {
+    "hero": {
+      "role": "PRODUCT & SYSTEMS ENGINEER",
+      "name": "Eldiyar",
+      "lead": "I take a product from idea to working system and make sure it does not fail, lose money, or wake you at three in the morning.",
+      "body": "For six years, I have built systems where mistakes are expensive: payments, crypto operations, financial services, trading systems, and real-time products. I work independently or lead a small engineering team, from requirements and architecture through launch and accountability after release.",
+      "cta": "Discuss a project",
+      "facts": [
+        "6 years in critical systems",
+        "fintech · web3 · trading · realtime",
+        "Antalya, Turkey · remote (Europe, CIS, Middle East)",
+        "full-time or contract"
+      ]
+    },
+    "nav": {
+      "results": "results",
+      "cases": "cases",
+      "ai": "AI",
+      "fit": "good fit",
+      "work": "engagement",
+      "contact": "contact"
+    },
+    "results": {
+      "eyebrow": "RESULTS",
+      "title": "Key results",
+      "items": [
+        [
+          "3,000+ RPS and 100M+ requests a day",
+          "Designed a microservice payment core in Encore.ts with Clean Architecture and 99.99% end-to-end uptime."
+        ],
+        [
+          "−90% on-chain fee operating costs",
+          "Implemented sweep-on-deposit with programmatic TRON energy rental and dynamic EVM gas top-up."
+        ],
+        [
+          "3M+ multi-chain wallets",
+          "Built an event-driven real-time transaction tracking pipeline with deposit splitting and nonce tracking; settlement latency is 2–3 seconds."
+        ],
+        [
+          "−70% load on public RPC nodes",
+          "Built a DEX-pool WebSocket monitoring engine for 15+ networks with two-tier Redis caching."
+        ],
+        [
+          "3 hours → 3 minutes per application",
+          "Designed the deal lifecycle State Machine and RBAC access model."
+        ],
+        [
+          "10,000+ concurrent WebSocket connections",
+          "Built multi-tenant media-session isolation with one Node.js process per room."
+        ],
+        [
+          "<250ms latency and −40% AI API spend",
+          "Designed an event-driven OpenAI, Deepgram and ElevenLabs integration bus with caching and deduplication."
+        ],
+        [
+          "−50% false trading signals",
+          "Built a six-factor Scoring Engine, Regime Classifier and HTF consensus gate."
+        ],
+        [
+          "30–60 minutes → 10–15 seconds per report",
+          "Designed analytics across 12+ microservices using Redis Streams and n8n."
+        ],
+        [
+          "Up to 60,000 RPS",
+          "Built a fault-tolerant Apache Kafka and NATS messaging bus."
+        ]
+      ]
+    },
+    "what": {
+      "eyebrow": "WHAT I DO",
+      "title": "Capabilities",
+      "items": [
+        [
+          "Launching products from scratch.",
+          "From the conversation of ‘we need this’ to a production version. I shape requirements, select architecture, build, launch, and improve from feedback."
+        ],
+        [
+          "Critical backend: payments, real time, high load.",
+          "Systems that process money and customer events and keep working under load, network failures, and partner errors."
+        ],
+        [
+          "Fintech and crypto payments.",
+          "Fund acceptance and distribution, wallets, asset custody, KYC/AML, and fee reduction. I have taken a platform through an external security audit."
+        ],
+        [
+          "Putting AI into products.",
+          "Production features for analytics, documents, news processing, and voice and text assistants, with quality and cost controls."
+        ],
+        [
+          "Rescuing projects.",
+          "I enter systems that fail, slow down, or have outgrown their architecture. I diagnose, fix, and explain the cause in plain language."
+        ],
+        [
+          "Engineering discipline.",
+          "Code reviews, mentoring, and development standards. I have completed 100+ deep reviews and taught middle and senior engineers."
+        ]
+      ]
+    },
+    "cases": {
+      "eyebrow": "CASES",
+      "title": "Projects",
+      "detail": "Technical details",
+      "hide": "Hide technical details",
+      "stack": "stack",
+      "achievements": "technical results",
+      "task": "Challenge",
+      "role": "My role",
+      "built": "What I built",
+      "changed": "What changed",
+      "items": [
+        {
+          "id": "trading",
+          "title": "Trading system with AI analytics",
+          "task": "Automated crypto trading lost money to inaccurate signals, while market analysis took up to an hour and decisions used stale data.",
+          "role": "Principal product engineer, responsible for discovery, architecture, development, launch, and operations.",
+          "built": "A trading decision system with multi-factor market evaluation and strict risk limits, plus AI agents that analyse markets, news, and forecasts in parallel.",
+          "changed": "The system capped risk before a trade, and analytics no longer blocked decisions.",
+          "metrics": [
+            "−50% false signals",
+            "10–15s reports instead of 30–60m",
+            "3% capital maximum daily loss",
+            "99.99% availability"
+          ],
+          "stack": [
+            "Node.js (Bun)",
+            "TypeScript",
+            "Python",
+            "PostgreSQL (TimescaleDB)",
+            "Redis",
+            "CCXT",
+            "n8n",
+            "OpenAI API"
+          ],
+          "achievements": [
+            "Built a six-factor Scoring Engine with PIT-MAD normalization, a five-state Regime Classifier, and an HTF consensus gate; cut false signals by 50%.",
+            "Designed Carver volatility-targeting risk management with 15 pre-trade guards and eight exit scenarios, capping daily drawdown at 3%.",
+            "Built an event-driven analytics architecture of 12+ Redis Streams and n8n services; reduced reports from 30–60 minutes to 10–15 seconds."
+          ]
+        },
+        {
+          "id": "payments",
+          "title": "Crypto payment infrastructure",
+          "task": "The company lost substantial transfer fees, while payment settlement was slow and unreliable as load grew.",
+          "role": "Lead engineer for the payment core and custody layer.",
+          "built": "A payment platform that monitors 15+ blockchain networks, automatically sweeps deposits, and optimizes the fee of each operation.",
+          "changed": "Fees fell nearly tenfold, settlement took seconds rather than minutes, and the platform sustained 100M requests a day.",
+          "metrics": [
+            "−90% fee costs",
+            "100M requests/day at 99.99%",
+            "2–3s settlement",
+            "3M wallets monitored"
+          ],
+          "stack": [
+            "Web3",
+            "NestJS",
+            "Encore.ts",
+            "Redis",
+            "PostgreSQL",
+            "TRON",
+            "EVM Networks",
+            "Event-Driven Architecture"
+          ],
+          "achievements": [
+            "Designed Encore.ts Clean Architecture payment microservices supporting 3,000+ RPS and 99.99% uptime.",
+            "Built a DEX-pool WebSocket engine across 15+ networks; cut public RPC load by 70% and data latency below 200ms.",
+            "Implemented sweep-on-deposit, TRON energy rental, and EVM gas top-up; lowered fees by 90%."
+          ]
+        },
+        {
+          "id": "exchange",
+          "title": "Currency exchange platform with document control",
+          "task": "Crypto-to-fiat applications took three hours by hand, while the platform also had to pass an external security audit.",
+          "role": "Full-stack engineer for both backend services and operator UI.",
+          "built": "A system where every deal follows a strict workflow, with KYC/AML, role separation, MFA, and eight-language support.",
+          "changed": "Operators stopped being the bottleneck; the platform passed the external audit and entered new regions.",
+          "metrics": [
+            "3 hours → 3 minutes",
+            "external audit passed",
+            "8 language zones"
+          ],
+          "stack": [
+            "NestJS",
+            "React.js",
+            "Redux",
+            "PostgreSQL",
+            "Redis",
+            "State Machine",
+            "RBAC",
+            "DDD"
+          ],
+          "achievements": [
+            "Designed the deal State Machine and RBAC, reducing handling time from three hours to three minutes.",
+            "Built a DDD modular monolith and API-first pipeline with generated frontend types.",
+            "Integrated KYC/AML, MFA, session invalidation, and webhook verification, enabling a successful external audit."
+          ]
+        },
+        {
+          "id": "voice",
+          "title": "Simultaneous speech translation for international events",
+          "task": "Thousands of participants needed to hear a speaker in their own language without delay or audio interruption.",
+          "role": "Lead engineer for the real-time platform.",
+          "built": "A speech-recognition, translation, and voice-delivery system in 50+ languages for thousands of listeners with hot language switching.",
+          "changed": "The product supported live events reliably, while AI-service costs fell 40%.",
+          "metrics": [
+            "10,000+ listeners",
+            "<0.25s latency",
+            "−40% AI-service costs",
+            "50+ languages"
+          ],
+          "stack": [
+            "Node.js",
+            "React.js",
+            "WebSocket",
+            "OpenResty",
+            "Redis",
+            "Deepgram",
+            "ElevenLabs",
+            "OpenAI"
+          ],
+          "achievements": [
+            "Built multi-tenant media-session isolation with OpenResty, Redis, and PM2 for stable 10,000+ WebSocket connections.",
+            "Designed an event-driven AI-provider bus with caching and deduplication; lowered latency below 250ms and API costs by 40%.",
+            "Implemented hot switching across 50+ languages without packet loss or a WebSocket disconnect."
+          ]
+        },
+        {
+          "id": "vending",
+          "title": "Vending-machine fleet management platform",
+          "task": "Thousands of machines in different cities required payments, tax reporting, remote configuration, and real-time sales visibility.",
+          "role": "Backend engineer and architecture-design contributor.",
+          "built": "The platform core that processes all device events and a bidirectional channel for remote machine configuration.",
+          "changed": "Tax reporting became automatic, and the platform had capacity for 10× device growth.",
+          "metrics": [
+            "99% transactions automated",
+            "up to 60,000 events/sec",
+            "10× growth headroom"
+          ],
+          "stack": [
+            "TypeScript",
+            "Node.js",
+            "PostgreSQL",
+            "Redis",
+            "Apache Kafka",
+            "NATS",
+            "RabbitMQ",
+            "Docker"
+          ],
+          "achievements": [
+            "Designed the multi-tenant SaaS event-driven core with capacity for 10× IoT fleet growth.",
+            "Built a fault-tolerant Kafka and NATS bus with throughput up to 60,000 RPS.",
+            "Implemented a bidirectional terminal protocol and automatic fiscalization for 99% of transactions."
+          ]
+        },
+        {
+          "id": "books",
+          "title": "Book digitisation pipeline",
+          "task": "A publisher needed to digitise and prepare thousands of editions for print without months of manual work.",
+          "role": "Full-cycle engineer, from data collection to the finished file.",
+          "built": "An automated collection, data-normalisation, and print-file pipeline that resumes from checkpoints after failure.",
+          "changed": "The system replaced work that had required external contractors, with no progress loss on failures.",
+          "metrics": [
+            "4,000+ editions",
+            "10× faster",
+            "0% progress loss",
+            "−50% storage costs"
+          ],
+          "stack": [
+            "Playwright",
+            "Bun",
+            "Node.js",
+            "Cheerio",
+            "Python",
+            "FFmpeg",
+            "CKEditor"
+          ],
+          "achievements": [
+            "Designed and shipped an end-to-end production aggregation pipeline for 4,000+ publisher-catalogue SKUs.",
+            "Built a fault-tolerant 64-worker download orchestrator with checkpoint resume, increasing throughput 10×.",
+            "Built a Sharp/FFmpeg batch pipeline that cut storage use by 50% without visual-quality loss."
+          ]
+        }
+      ]
+    },
+    "ai": {
+      "eyebrow": "PRINCIPLES",
+      "title": "How I work with AI",
+      "lead": "AI speeds up development, but it also makes confident, plausible mistakes. I use these controls to keep it useful.",
+      "items": [
+        [
+          "Specification",
+          "Written scope, an explicit ‘what we do NOT do’, and acceptance criteria before the first line of code."
+        ],
+        [
+          "Context",
+          "AI needs a clear task and the relevant system context."
+        ],
+        [
+          "Agents",
+          "Several AI executors work on separate parts of a task in parallel, following a clear hand-off rule."
+        ],
+        [
+          "Quality checks",
+          "Every AI feature has a reference set with known correct answers."
+        ],
+        [
+          "Security",
+          "AI receives no broader access than the task needs. Money and client data pass deterministic checks."
+        ],
+        [
+          "Observability",
+          "I track what AI did, why it did it, and what it cost. Every decision is auditable."
+        ],
+        [
+          "Cost control",
+          "Costs are tracked by function: caching, model selection, and fallback scenarios."
+        ],
+        [
+          "Boundaries",
+          "AI is for analytics, text, drafts, and hypotheses. Money, access, and critical operations use deterministic code only."
+        ],
+        [
+          "Accountability",
+          "No line reaches production without my review. ‘AI wrote it’ is not an explanation."
+        ]
+      ]
+    },
+    "fit": {
+      "eyebrow": "GOOD FIT",
+      "title": "Who I work best with",
+      "items": [
+        [
+          "Founders from idea to first customers.",
+          "You need one person to own the product end-to-end."
+        ],
+        [
+          "Fintech and crypto companies.",
+          "Payments, wallets, custody, customer checks, and fee reduction."
+        ],
+        [
+          "Teams that hit a ceiling.",
+          "The system is slow, fails under load, or is too risky to change. I diagnose the cause and give you a clear plan."
+        ],
+        [
+          "Businesses that want AI implemented for real.",
+          "A product feature with measurable quality, predictable cost, and clear boundaries."
+        ],
+        [
+          "Companies where failure is expensive.",
+          "Where an outage means lost money, damaged data, or a conversation with a regulator."
+        ]
+      ],
+      "noFitTitle": "not a fit",
+      "noFit": "I am not a fit if you need an executor with no voice in decisions, or if the task is to fill a deadline with features without considering what happens in six months. I will say when I think the plan is wrong."
+    },
+    "work": {
+      "eyebrow": "ENGAGEMENT",
+      "title": "How to work with me",
+      "items": [
+        [
+          "Full-time",
+          "Remote, overlapping European business hours."
+        ],
+        [
+          "Project contract",
+          "Fixed scope, agreed timeline, and acceptance criteria."
+        ],
+        [
+          "Part-time as lead engineer",
+          "Several days per week for architecture, reviews, and team direction."
+        ],
+        [
+          "Audit and system rescue",
+          "A short engagement to diagnose the problem and deliver a prioritised plan."
+        ]
+      ],
+      "lead": "The first step is always a short conversation about the task. Afterwards, I say whether I can take it and, if so, with what estimate.",
+      "cta": "Discuss a project"
+    },
+    "contact": {
+      "eyebrow": "CONTACT",
+      "title": "Discuss a project",
+      "items": [
+        [
+          "Telegram",
+          "@EldiyarDev",
+          "https://t.me/EldiyarDev"
+        ],
+        [
+          "Email",
+          "eldiyar.dev@gmail.com",
+          "mailto:eldiyar.dev@gmail.com"
+        ],
+        [
+          "LinkedIn",
+          "linkedin.com/in/eldiyar-dev",
+          "https://linkedin.com/in/eldiyar-dev"
+        ]
+      ]
+    },
+    "footer": {
+      "role": "eldiyar · product & systems engineer",
+      "cta": "discuss a project"
+    }
+  },
+  "site": {
+    "pages": {
+      "ai-workflow-rescue": {
+        "metadata": {
+          "cta": "Забронировать платную диагностику",
+          "url": "/ai-workflow-rescue",
+          "description": "Платная диагностика n8n и agent workflows: critical path, retries, idempotency, observability, стоимость API и план исправлений.",
+          "title": "AI Workflow Production Rescue",
+          "offer": "Workflow Reliability Review"
+        },
+        "body": "# Workflow уже работает, но действия дублируются, jobs зависают, а причина сбоя не видна\n\n## Proof strip\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · 60K RPS messaging · до −90% costs`\n\n## Цена бездействия\n\nПовторный webhook может запустить действие дважды, а потерянный state — оставить процесс в неопределённом состоянии. Непонятные retries и отсутствие traces превращают каждый сбой в ручное расследование. Одновременно LLM/API-счёт может расти без понятной связи с конкретным flow.\n\n## Workflow Reliability Review\n\nWorkflow Reliability Review длится 90 минут и завершается отчётом. Для подготовки достаточно описания архитектуры, схем потоков, экспорта конфигурации workflow с вырезанными секретами, примеров логов и скриншотов мониторинга. Реальные ключи, пароли и доступы к боевой среде не запрашиваются.\n\nОтчёт готовится за 3–5 рабочих дней с момента получения материалов. На разборе по видеосвязи каждый риск привязывается к конкретному месту системы и условиям, при которых он проявится.\n\n## Что будет в deliverable\n\n- Схема critical path вашего workflow.\n- 3 главных риска с оценкой последствий.\n- Root-cause гипотезы для наблюдаемых сбоев.\n- Карта retries и idempotency.\n- Пробелы в observability и контроле затрат.\n- План NOW / NEXT / LATER: что чинить сейчас, что дальше, что можно отложить.\n\n## Кейс: event-driven аналитика и AI-агенты\n\n**Контекст.** В закрытой системе подготовка рыночной аналитики занимала 30–60 минут. Решения принимались по устаревшим данным.\n\n**Роль.** Основной инженер продукта: постановка задачи, архитектура, разработка, запуск и эксплуатация. Метрики относятся к аналитическому контуру и слою AI-агентов, за которые я отвечал.\n\n**Решение.** Я спроектировал event-driven архитектуру из 12+ микросервисов на Redis Streams и n8n без блокирующих HTTP-зависимостей. Также отвечал за API-слой иерархической multi-agent системы GPT-5 via OpenRouter с параллельной оркестрацией 7 модулей.\n\nObservability включал Pino JSON, Promtail и Grafana Cloud Loki, а также LLM-powered Telegram-интерфейс для аудита AI-агентов, валидации промптов в production и контроля критических путей.\n\n- Отчёты: с 30–60 минут до 10–15 секунд.\n- p99 < 1с для критических триггеров.\n- Нагрузка на PostgreSQL: −90% при uptime 99.99%.\n- Интеграция модулей: с 2 дней до 2 часов.\n\n<!-- DEMO: анонимизированный trace критического n8n/agent workflow с retry, observability и отчётом -->\n\n## Как проходит работа\n\n1. На бесплатном квалификационном звонке 15 минут уточняем один критичный flow и материалы для разбора.\n2. Вы передаёте описание архитектуры, sanitised-конфигурацию, логи и скриншоты без секретов.\n3. Я разбираю critical path, повторы, состояние, причины отказов, наблюдаемость и стоимость.\n4. Вы получаете письменный отчёт и разбор по видеосвязи.\n5. Если нужен следующий этап, фиксируем scope стабилизационного спринта; отчёт остаётся у вас независимо от решения.\n\n## Зачем сначала разбирать один flow\n\nКоманда знает систему лучше, но исследование режимов отказа часто не помещается в обычный спринт. Внешний разбор даёт карту рисков, с которой команда может работать самостоятельно.\n\nКаждый пункт отчёта привязан к конкретному месту workflow и условиям сбоя. Так риск повторного действия, потери состояния или неконтролируемой стоимости API отделяется от того, что не блокирует запуск сейчас.\n\nПосле отчёта ваша команда может сделать изменения сама или согласовать стабилизационный спринт для самых рискованных частей. Если проблема лежит вне моего scope, это станет ясно до следующего этапа. Отчёт остаётся вашим рабочим документом.\n\nМатериалы разбора остаются конфиденциальными. В публичных примерах используются только анонимизированные кейсы: без названий компаний, продуктов, реальных ключей, выручки и данных клиентов.\n\nГраницы ответственности и следующий scope фиксируются письменно до начала следующего этапа.\n\nВ отчёте сохраняются схема critical path, три главных риска, root-cause гипотезы, карта retries/idempotency, пробелы cost/observability и план NOW / NEXT / LATER.\n\n## Что НЕ входит\n\n- Сборка новой автоматизации вместо диагностики существующей.\n- Запрос реальных ключей, паролей или доступа к боевой среде на этапе диагностики.\n- Формальный security audit или pentest.\n- Сертификация и юридические заключения.\n\n## Цена\n\nДля русскоязычных клиентов Workflow Reliability Review стоит $400–600. Диагностика всегда платная; её стоимость засчитывается в спринт, если работа продолжается в течение 30 дней.\n\n## Следующий шаг\n\n[Забронировать платную диагностику]"
+      },
+      "ai-launch-gate": {
+        "metadata": {
+          "cta": "Забронировать платную диагностику",
+          "url": "/ai-launch-gate",
+          "description": "Платная проверка готовности AI-прототипа к production: GO/CONDITIONAL GO/NO-GO, блокеры запуска, cost, backup и rollback.",
+          "title": "AI Prototype Launch Gate",
+          "offer": "Production Readiness Review"
+        },
+        "body": "# Демо работает, но никто не знает, можно ли подключать реальных пользователей, платежи и production-данные\n\n## Proof strip\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · 60K RPS messaging · до −90% costs`\n\n## Цена бездействия\n\nПосле demo проблема обычно не в том, что код неидеален. Критичны повторное списание денег, потеря данных, утечка ключей и неконтролируемый рост счёта за API. Если их не отделить от технического перфекционизма до запуска, команда узнаёт о блокере уже на реальных пользователях.\n\n## Production Readiness Review\n\nProduction Readiness Review предназначен для AI-агентств, semi-technical founders и команд, собравших продукт на Cursor, Codex, Lovable, Bolt, Replit или v0. Review даёт решение о готовности к запуску.\n\nДля работы нужны описание архитектуры, схемы потоков, экспорт конфигурации с вырезанными секретами, примеры логов и скриншоты мониторинга. Реальные ключи и доступ к production не требуются. Результат готовится за 3–5 рабочих дней с момента получения материалов.\n\n## Что будет в deliverable\n\n- Решение GO / CONDITIONAL GO / NO-GO.\n- Launch Risk Map.\n- Три блокера запуска.\n- Чеклист security / cost / backup / rollback.\n- Scope следующего спринта.\n- Письменный отчёт и разбор по видеосвязи.\n\n## Кейс: контролируемый lifecycle критичной операции\n\n**Контекст.** В закрытой платформе обмена криптоактивов на фиат заявка обрабатывалась вручную 3 часа. Платформе предстоял внешний аудит безопасности.\n\n**Роль.** Инженер полного цикла: серверная часть и интерфейс операторов. Я отвечал за lifecycle сделки, ролевую модель и интеграцию KYC/AML-контура.\n\n**Решение.** Я спроектировал конечный автомат для жизненного цикла сделок и RBAC. В контур вошли скрининг кошельков, идентификация контрагентов, MFA, инвалидация сессий и верификация вебхуков. Кейс не про AI-прототип: он показывает тот же запусковый вопрос для критичного процесса, где ни один шаг не должен быть пропущен или выполнен не в том порядке.\n\n- Обработка заявки: 3 часа → 3 минуты.\n- Платформа прошла внешний аудит безопасности.\n- 8 языковых зон для региональной экспансии.\n- Контрактные ошибки при интеграции исключены за счёт API-first pipeline с автоматической генерацией типов для frontend-клиента.\n\n<!-- DEMO: анонимизированная state machine жизненного цикла сделки и запрещённые переходы -->\n\n## Как проходит работа\n\n1. На бесплатном квалификационном звонке 15 минут определяем продукт, предполагаемый сценарий запуска и материалы.\n2. Вы передаёте sanitised-описание архитектуры, конфигурации, логи и мониторинг.\n3. Я проверяю запусковые риски: деньги, данные, секреты, стоимость API, backup и rollback.\n4. Вы получаете GO / CONDITIONAL GO / NO-GO, карту рисков и три блокера.\n5. При необходимости следующий sprint получает узкий scope; отчёт остаётся у вашей команды.\n\n## Что решает review, а что — нет\n\nReview отделяет реальные launch blockers от технического перфекционизма. Перед запуском нужно разобрать риск повторного списания денег, потери данных, утечки ключей и неконтролируемого счёта за API.\n\nКаждый пункт отчёта относится к конкретному месту системы и условиям, в которых он проявится. Документ можно использовать с вашей текущей командой или другим исполнителем. Если критичных рисков не найдётся, отчёт перечислит проверенное.\n\nReview не требует передачи production-секретов. На этапе внедрения доступ, если он действительно нужен, обсуждается отдельно; права выдаются минимально необходимые и могут быть отозваны в любой момент.\n\nОсновной канал этого review — white-label для AI-агентств, которые уже продают клиентам сборку. Готовность solo-founder платить за review не подтверждена; это не используется как обещание спроса. В публичных материалах кейсы анонимизированы: без названий компаний, продуктов, реальных ключей, выручки и данных клиентов.\n\nГраницы ответственности, объём следующего спринта и критерии приёмки фиксируются письменно до старта работ.\n\nВ отчёте остаются решение GO / CONDITIONAL GO / NO-GO, Launch Risk Map, три блокера, чеклист security / cost / backup / rollback и scope следующего спринта.\n\nБлокеры привязаны к месту системы.\n\n## Что НЕ входит\n\n- Переписывание всего продукта в рамках review.\n- Формальный security audit или pentest.\n- Обещание SLA или сертификация.\n- Запрос production-ключей и паролей на этапе диагностики.\n- Юридическое или compliance-заключение.\n\n## Цена\n\nДля русскоязычных клиентов Production Readiness Review стоит $600–1 000. Диагностика всегда платная; её стоимость засчитывается в спринт, если работа продолжается в течение 30 дней.\n\n## Следующий шаг\n\n[Забронировать платную диагностику]"
+      },
+      "capabilities": {
+        "metadata": {
+          "cta": "Забронировать платную диагностику",
+          "url": "/capabilities",
+          "description": "Realtime/high-load, fractional CTO, technical due diligence, quant infrastructure и data pipelines для систем с высокой ценой ошибки.",
+          "title": "Capabilities",
+          "offer": "Платная диагностика критичного контура"
+        },
+        "body": "# Сложная система не обязана быть широкой задачей: сначала определяется критичный контур\n\n## Proof strip\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · 60K RPS messaging · до −90% costs`\n\nЭти направления принимаются по входящему запросу, когда проблема уже сформулирована. Платная диагностика одного критичного контура задаёт границы, приоритеты и следующий scope. Цены на этой странице не публикуются.\n\n## Realtime / high-load\n\nДля communication/audio-продуктов, live events, IoT, маркетплейсов и систем с WebSocket или event streaming разбор охватывает конкретные режимы отказа. В него входят latency budget, lifecycle соединения, backpressure, fan-out, failure recovery, кэширование, план нагрузочного теста и observability.\n\nВ realtime AI-платформе, где я отвечал за платформу реального времени, изоляция медиа-сессий отдельным Node.js-процессом на комнату обеспечила 10,000+ WebSocket-соединений. Event-driven шина AI-провайдеров с кэшированием и дедупликацией дала latency <250 мс, −40% расходов на API и 99.99% uptime. В IoT-платформе, где я разрабатывал шину сообщений, Apache Kafka и NATS достигали до 60,000 RPS.\n\n## Fractional CTO / technical due diligence\n\nДля стартапов seed/Series A, VC-фондов и акселераторов работа начинается как Architecture & Scale Audit, Technical Due Diligence или fractional-ретейнер. Обычно это продолжение успешной диагностики или спринта. Цель — сделать инженерные решения проверяемыми: сформулировать scope, разделить текущие риски и технический долг, определить нужную архитектуру и оставить команде рабочий план.\n\nВ моей практике это включает техническое лидерство, архитектурные решения, Code Review и превращение бизнес-требований в технические спецификации. В IoT SaaS-платформе, где я участвовал в проектировании архитектуры, был заложен 10-кратный запас масштабирования парка устройств. Я также оптимизировал слой PostgreSQL с 60+ таблицами и 8 уровнями иерархии. Проведено более 100 глубоких Code Review. Формальный security audit и сертификация не входят в эту услугу.\n\n## Quant infrastructure\n\nЗдесь поставляется ПО и инфраструктура для execution engine, backtesting, risk management, market regime classification, orderbook-аналитики и observability торговой системы. Управление чужими средствами, инвестиционные рекомендации и обещания доходности не предлагаются.\n\nВ QuantCortex, где я отвечал за продукт как Founding Software Engineer, Scoring Engine с 6-факторной системой, 5-состояний Regime Classifier и HTF consensus-гейтом снизил ложные сигналы на 50%. Я спроектировал 15 Pre-Trade Risk Guards / Circuit Breakers и ограничил дневную просадку 3% капитала. Execution Engine использовал эскалацию Limit → Re-quote → IOC → Market; real-time пайплайн снизил нагрузку на PostgreSQL на 90% при uptime 99.99%.\n\n## Data pipelines\n\nКастомный data pipeline нужен там, где no-code инструменты ломаются на сложной нормализации, headless-генерации, отказоустойчивости и возобновлении с контрольных точек. Подход применим к e-commerce-каталогам, издательствам, lead-gen-бизнесам и медиа; при работе с сайтами и персональными данными остаются ограничения ToS, GDPR и законов о рассылках.\n\nВ LiberPress, где я отвечал за полный контур от сбора данных до готового файла, end-to-end пайплайн импортировал, нормализовал и генерировал 4,000+ SKU. Пул из 64 изолированных воркеров на Bun увеличил пропускную способность в 10 раз. Файловые блокировки и идемпотентные перезапуски свели потери прогресса при сбоях к 0%; batch-конвейер сократил объём хранилища на 50% без потери визуального качества типографики.\n\n## Следующий шаг\n\n**[Забронировать платную диагностику]**"
+      },
+      "index": {
+        "metadata": {
+          "cta": "Разобрать один критичный flow",
+          "url": "/",
+          "description": "Довожу критичные части AI-продуктов и backend-систем до production: payments, realtime, observability и надёжные workflows.",
+          "title": "AI Product & Critical Systems Engineering",
+          "offer": "Платная диагностика критичного flow"
+        },
+        "body": "AI PRODUCT & CRITICAL SYSTEMS ENGINEERING\n\n# Вы быстро собрали продукт с AI. Я довожу критичные части до production.\n\nАрхитектура, backend, payments, security, realtime и observability — там, где цена ошибки измеряется деньгами, данными или downtime.\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · до −90% costs`\n\n**[ Разобрать один критичный flow ]**\n\n## Proof strip\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · 60K RPS messaging · до −90% costs`\n\n## Против чего я работаю\n\nРаботаю с непроверенной скоростью: прототип выглядит готовым, а под ним остаются дубли платежей, потеря состояния, утечки секретов, неконтролируемые API-затраты и отсутствие восстановления.\n\nAI ускоряет сборку. Я отвечаю за то, чтобы результат выдержал реальные деньги, данные и нагрузку.\n\n- **Ship** — превращаю неясную задачу в работающий продукт.\n- **Stabilize** — нахожу и закрываю failure modes, которые проявятся под реальной нагрузкой.\n- **Own** — оставляю мониторинг, runbook и границы, чтобы система развивалась без зависимости от меня.\n\n## Три места, где demo перестаёт быть продуктом\n\n### Workflow делает действие дважды, теряет state или расходует API-бюджет без объяснения\n\nПосле запуска автоматизации проблема редко выглядит как «workflow не работает». Чаще она проявляется повторным действием, зависшей job, потерянным состоянием или непонятным retry. Без карты critical path команда не может установить причину сбоя и отличить нужное исправление от случайного патча.\n\n[AI Workflow Production Rescue](/ai-workflow-rescue) разбирает один критичный workflow.\n\n### Деньги дошли в сеть, но не зачислились вовремя или стоили слишком дорого\n\nВ платёжном контуре риск живёт на стыке deposit monitoring, retries, nonce management, settlement и reconciliation. Ошибка в одном из этих мест означает дорогую on-chain операцию, failed TRON-транзакцию, расхождение в учёте или задержку зачисления.\n\n[Payments Reliability](/payments-reliability) разбирает платёжный flow.\n\n### AI-прототип выглядит готовым, но никто не может подписаться под запуском\n\nДля реальных пользователей недостаточно работающего экрана. Нужно понять, где продукт может потерять данные, раскрыть секрет, повторить действие или получить неконтролируемый счёт за API. Production Readiness Review отделяет блокеры запуска от технического перфекционизма.\n\n[AI Launch Gate](/ai-launch-gate) проверяет готовность AI-прототипа к запуску.\n\n## Кейсы: системы, в которых я отвечал за критичный контур\n\nНазвания закрытых проектов не раскрываю. Метрики относятся к системам, в которых я отвечал за описанные части архитектуры и разработки; scope указан в каждом кейсе.\n\n### Event-driven аналитика и AI-workflow\n\nВ системе, где я отвечал за event-driven аналитику и API-слой иерархической multi-agent системы, были 12+ микросервисов на Redis Streams и n8n. Я убрал блокирующие HTTP-зависимости и организовал параллельную оркестрацию 7 модулей.\n\n- Отчёты: 30–60 минут → 10–15 секунд.\n- p99 < 1с для критических триггеров.\n- Интеграция модулей: с 2 дней до 2 часов.\n- Ложные сигналы: −50%.\n\n<!-- DEMO: анонимизированный trace критического workflow, retry и отчёт 30–60 минут → 10–15 секунд -->\n\n### Мультичейн-платёжный контур\n\nВ системе, где я отвечал за платёжное ядро и real-time трекинг транзакций, я спроектировал архитектуру для 3,000+ RPS и 100+ млн запросов/сутки. Контур отслеживал транзакции по базе из 3M+ мультичейн-кошельков и выполнял sweep-on-deposit с арендой энергии TRON и gas top-up в EVM.\n\n- Сквозной аптайм системы: 99.99%.\n- Settlement latency: 2–3 секунды.\n- Нагрузка на публичные RPC-ноды: −70%.\n- Операционные издержки на on-chain комиссии: −90%.\n\n<!-- DEMO: анонимизированный поток deposit monitoring, sweep-on-deposit и метрики settlement -->\n\n### Realtime AI-платформа\n\nВ системе, где я отвечал за платформу реального времени, медиа-сессии были изолированы отдельным Node.js-процессом на комнату. Я спроектировал event-driven шину AI-провайдеров с кэшированием и дедупликацией при fan-out.\n\n- 10,000+ WebSocket-соединений.\n- Latency <250 мс.\n- Расходы на API: −40%.\n- Горячее переключение 50+ языков без потери пакетов и разрыва WebSocket-сессий.\n\n<!-- DEMO: анонимизированная realtime-сессия с fan-out, latency и переключением языка -->\n\n## Как выбрать первый шаг\n\nЕсли критичен один workflow, входной продукт — Workflow Reliability Review: 90 минут + отчёт. В нём будут схема critical path, 3 главных риска, root-cause гипотезы, карта retries/idempotency, пробелы cost/observability и план NOW / NEXT / LATER.\n\nЕсли через систему движутся деньги, нужен Payment Flow Reliability Audit. Его результат — trust boundaries, lifecycle/state machine, retries + idempotency, wallet/RPC-топология, точки reconciliation, gas/energy-оптимизация, monitoring и security backlog.\n\nЕсли продукт уже собран с AI-инструментами, но вопрос — можно ли подключать реальных пользователей, подходит Production Readiness Review. Он фиксирует решение GO / CONDITIONAL GO / NO-GO, Launch Risk Map, три блокера, чеклист security / cost / backup / rollback и scope следующего спринта.\n\n## Что остаётся после работы\n\nПосле диагностики вы получаете рабочий документ, который можно передать своей команде или другому исполнителю. Если продолжать работу вместе, самые рискованные части можно закрыть в спринте с мониторингом и инструкцией по эксплуатации.\n\nДля задач realtime/high-load, fractional CTO, quant и data pipelines есть [capabilities](/capabilities). Это направления для входящего запроса, когда проблема уже сформулирована.\n\n## Формат без лишнего процесса\n\nКороткий квалификационный звонок определяет, относится ли проблема к моему scope, и цену. Диагностика остаётся платной. Для неё достаточно материалов, которые можно обезличить или очистить; production-секреты не требуются.\n\nПосле отчёта команда может выполнить план сама или согласовать спринт для наиболее рискованных частей. Если задача лежит вне моей зоны, это будет зафиксировано до следующего этапа.\n\nРаботаю один: вы обсуждаете систему с тем, кто выполняет разбор. Формальный аудит безопасности, большой объём фронтенда, дизайн и юридическая оценка регулирования остаются вне инженерной диагностики.\n\nРабочий часовой пояс — UTC+3: полное пересечение с Европой и СНГ, первая половина дня с восточным побережьем США. Оплата возможна банковским переводом, платёжными сервисами, стейблкоинами или криптовалютой."
+      },
+      "payments-reliability": {
+        "metadata": {
+          "cta": "Забронировать платную диагностику",
+          "url": "/payments-reliability",
+          "description": "Платёжная диагностика для wallets, stablecoins и settlement: state machine, reconciliation, retries, RPC-топология и контроль on-chain costs.",
+          "title": "Payments Reliability",
+          "offer": "Payment Flow Reliability Audit"
+        },
+        "body": "# Платёж дошёл в сеть, но вы не уверены, что он зачислится правильно и без лишних затрат\n\n## Proof strip\n\n`100M+ requests/day · 3M+ wallets · 10K+ WebSockets · 60K RPS messaging · до −90% costs`\n\n## Цена бездействия\n\nВ платёжном контуре дорогие on-chain комиссии, failed TRON-транзакции из-за Energy/Bandwidth, ненадёжный deposit-monitoring и расхождения в reconciliation не остаются внутренней технической задачей. Они влияют на зачисление средств, settlement и операционные издержки. MEV/front-running и ошибки в nonce management добавляют риск там, где система уже двигает деньги.\n\n## Payment Flow Reliability Audit\n\nPayment Flow Reliability Audit подходит для payment flow, stablecoin/wallet infrastructure и settlement, когда нужно проверить критичный контур до изменений или сформировать scope implementation sprint.\n\nДля диагностики достаточно описания архитектуры, схем потоков, примеров логов и скриншотов мониторинга без секретов. Реальные ключи, пароли и доступы к production на этом этапе не нужны. Результат готовится за 3–5 рабочих дней с момента получения материалов.\n\n## Что будет в deliverable\n\n- Trust boundaries платёжного контура.\n- Lifecycle/state machine для критичных операций.\n- Карта retries + idempotency.\n- Wallet/RPC-топология.\n- Точки reconciliation.\n- Gas/energy-оптимизация.\n- Monitoring и security backlog.\n\n## Кейс: мультичейн-платёжная инфраструктура\n\n**Контекст.** В закрытой платёжной инфраструктуре зачисление средств было медленным и ненадёжным при росте нагрузки, а on-chain комиссии создавали операционные издержки.\n\n**Роль.** Я отвечал за платёжное ядро и real-time трекинг транзакций.\n\n**Решение.** Я спроектировал микросервисную архитектуру на Encore.ts с Clean Architecture. Она обрабатывала пиковые нагрузки в 3,000+ RPS (100+ млн запросов/сутки) со сквозным аптаймом системы 99.99%.\n\nЯ разработал sweep-on-deposit с программной арендой энергии TRON и динамическим gas top-up в EVM. Также отвечал за event-driven конвейер трекинга транзакций по базе из 3M+ мультичейн-кошельков, параллельный сплиттинг депозитов и конкурентный nonce-tracking контроллер.\n\n- Операционные издержки бизнеса на on-chain комиссии: −90%.\n- Settlement latency: 2–3 секунды.\n- Нагрузка на публичные RPC-ноды: −70%.\n- Данные из 15+ EVM/non-EVM сетей; latency <200 мс.\n\n<!-- DEMO: анонимизированный поток deposit monitoring, sweep-on-deposit, nonce-tracking и settlement -->\n\n## Как проходит работа\n\n1. На бесплатном квалификационном звонке 15 минут фиксируем один платежный flow и границы диагностики.\n2. Вы передаёте схемы, sanitised-материалы, логи и мониторинг без production-секретов.\n3. Я разбираю lifecycle, retries, idempotency, wallets, RPC, reconciliation и стоимость операций.\n4. Вы получаете отчёт и разбор по видеосвязи с приоритетами NOW / NEXT / LATER.\n5. Если нужен следующий этап, фиксируем implementation sprint; стоимость диагностики может быть зачтена в него.\n\n## Почему аудит начинается с одного контура\n\nПлатёжная система может включать много сетей, поставщиков и сервисов. Аудит берёт один flow: от события до зачисления, settlement или reconciliation. Так видны trust boundaries и места, где повтор, потеря состояния или ошибка партнёра меняют результат операции.\n\nРазбор оставляет команде карту рисков с приоритетами: что закрыть сейчас, что делать дальше и что можно отложить. Отчёт можно передать текущему разработчику или другому исполнителю. Переход в implementation sprint остаётся выбором команды.\n\nЕсли для внедрения понадобятся доступы, они обсуждаются отдельно. Права выдаются минимально необходимые и могут быть отозваны в любой момент. На этапе диагностики production-секреты не нужны и не запрашиваются.\n\nМатериалы и схема платёжного контура остаются конфиденциальными. Публичные кейсы анонимизированы: в них не раскрываются названия компаний, продуктов, реальные ключи, выручка и данные клиентов. Метрики относятся к системам и к моему личному scope внутри них.\n\nОтчёт фиксирует trust boundaries, lifecycle/state machine, retries + idempotency, wallet/RPC-топологию, точки reconciliation, gas/energy-оптимизацию, monitoring и security backlog.\n\n## Что НЕ входит\n\n- Формальный аудит смарт-контрактов.\n- Тестирование на проникновение.\n- Юридическое заключение по AML, MiCA или другому регулированию.\n- Сертификация или обещание SLA.\n- Управление чужими средствами.\n\n## Цена\n\nДля русскоязычных клиентов Payment Flow Reliability Audit стоит $1 200–2 500. Диагностика всегда платная; её стоимость засчитывается в спринт, если клиент идёт дальше в течение 30 дней.\n\n## Следующий шаг\n\n[Забронировать платную диагностику]"
+      }
+    }
+  }
+}

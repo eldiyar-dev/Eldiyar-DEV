@@ -1,0 +1,47 @@
+:root {
+  --paper: #fafbfa;
+  --ink: #0f1211;
+  --hero: #0a0d0c;
+  --signal: #00c48c;
+  --signal-deep: #00795a;
+  --counter-signal: #c40038;
+  --graphite: #6b7270;
+  --hairline: #dfe3df;
+  --soft: #f2f4f2;
+  --muted: #a8afa9;
+  --dark-line: #2a2f2c;
+  --font-sans: var(--font-geist), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), "Courier New", monospace;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+a {
+  color: inherit;
+}
+button {
+  font: inherit;
+}
+::selection {
+  background: var(--signal);
+  color: var(--ink);
+}
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
