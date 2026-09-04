@@ -1,2 +1,2 @@
-.fluidRoot{position:relative;touch-action:pan-y}.fluidHero{position:absolute;inset:0;z-index:0;overflow:hidden;background:#000}.fluidHero>div{width:100%;height:100%;overflow:hidden}.fluidHero canvas{display:block;width:100%;height:100%;touch-action:pan-y}.fluidHero>div>div{display:none}
+.fluidRoot{position:relative;touch-action:pan-y}.fluidHero{position:absolute;inset:0;z-index:0;overflow:hidden;background:#000;container-type:size}.fluidHero>div{position:absolute;top:50%;left:50%;width:max(100cqw,calc(100cqh * 16 / 9));height:max(100cqh,calc(100cqw * 9 / 16));overflow:hidden;transform:translate(-50%,-50%)}.fluidHero canvas{display:block;width:100%;height:100%;touch-action:pan-y}.fluidHero>div>div{display:none}
 .contentLayer{position:relative;z-index:1}

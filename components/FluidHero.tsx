@@ -8,10 +8,10 @@ const FluidBackdrop = dynamic(() => import('./fluid/FluidBackdrop'), {ssr: false
 
 /** Layout adapter for the unmodified vgpu interactive-fluid example. */
 export function FluidHero({children}: {children: ReactNode}) {
-  const [root, setRoot] = useState<HTMLDivElement | null>(null);
+  const [inputTarget, setInputTarget] = useState<HTMLDivElement | null>(null);
 
-  return <div ref={setRoot} className={styles.fluidRoot}>
-    <div className={styles.fluidHero} aria-hidden="true">{root && <FluidBackdrop inputTarget={root} />}</div>
+  return <div ref={setInputTarget} className={styles.fluidRoot}>
+    <div className={styles.fluidHero} aria-hidden="true">{inputTarget && <FluidBackdrop inputTarget={inputTarget} />}</div>
     {children}
   </div>;
 }

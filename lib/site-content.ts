@@ -77,6 +77,22 @@ export function getFaqContent(locale: SiteLocale = defaultLocale): FaqContent {
   return messages[locale].faq;
 }
 
+/** Removes the introductory experience block, which duplicated the case studies below it. */
+function removeExperienceSection(nodes: MarkdownNode[]): MarkdownNode[] {
+  const experienceHeadings = new Set(['Опыт в похожих задачах', 'Relevant experience']);
+  const result: MarkdownNode[] = [];
+  let skipSection = false;
+
+  for (const node of nodes) {
+    if (node.type === 'heading' && node.level === 2) {
+      skipSection = experienceHeadings.has(node.text);
+    }
+    if (!skipSection) result.push(node);
+  }
+
+  return result;
+}
+
 export function getSitePage(id: SitePageId, locale: SiteLocale = defaultLocale): SitePage {
   const page = messages[locale].site.pages[id === 'home' ? 'index' : id];
   if (!page) throw new Error(`Unknown site page: ${id}`);
@@ -92,7 +108,7 @@ export function getSitePage(id: SitePageId, locale: SiteLocale = defaultLocale):
     .replaceAll('платной диагностики', 'диагностики')
     .replaceAll('платной', 'отдельной');
   const metadata = {...page.metadata, title: normalizeCopy(page.metadata.title), description: normalizeCopy(page.metadata.description), offer: normalizeCopy(page.metadata.offer), cta: normalizeCopy(page.metadata.cta)};
-  return {metadata, nodes: parseMarkdown(normalizeCopy(page.body))};
+  return {metadata, nodes: removeExperienceSection(parseMarkdown(normalizeCopy(page.body)))};
 }
 
 export function getAllPageMetadata(locale: SiteLocale = defaultLocale): Array<PageMetadata & {id: SitePageId}> {

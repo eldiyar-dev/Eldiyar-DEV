@@ -1,6 +1,6 @@
 import {ActionLink, Reveal} from '@/components/ui';
 import {getFaqContent, type MarkdownNode, type SiteLocale, type SitePage as SitePageData} from '@/lib/site-content';
-import {defaultLocale} from '@/lib/i18n';
+import {defaultLocale, getLocalizedPath} from '@/lib/i18n';
 import {ContentSections} from './ContentSections';
 import {MarkdownContent} from './MarkdownContent';
 import {diagnosticHref} from './site.constants';
@@ -32,5 +32,7 @@ export function SitePage({page, locale = defaultLocale}: SitePageProps) {
   const heroHasCta = heroNodes.some(node => node.type === 'paragraph' && node.text.includes(page.metadata.cta));
   const heroCta = !heroHasCta && consumeCta();
 
-  return <main className={styles.site} lang={locale}><section className={styles.hero}><FluidHero><div className={`${styles.container} ${fluidStyles.contentLayer}`}><SiteNavigation locale={locale} currentUrl={page.metadata.url} /><Reveal className={styles.heroContent}><p className={styles.eyebrow}>{page.metadata.offer}</p><h1>{h1?.text ?? page.metadata.title}</h1><p className={styles.lead}>{page.metadata.description}</p><div className={styles.heroCopy}><MarkdownContent nodes={heroNodes} cta={page.metadata.cta} onCta={consumeCta} locale={locale} />{heroCta && <ActionLink className={styles.primaryButton} href={diagnosticHref(locale)}>{page.metadata.cta}</ActionLink>}</div></Reveal></div></FluidHero></section><div className={styles.container}><ContentSections nodes={contentNodes} cta={page.metadata.cta} onCta={consumeCta} locale={locale} /><FaqSection content={getFaqContent(locale)} locale={locale} /></div><SiteFooter locale={locale} currentPath={page.metadata.url} /></main>;
+  const cvLinkLabel = locale === 'ru' ? 'Подробнее в CV' : 'More in CV';
+
+  return <main className={styles.site} lang={locale}><section className={styles.hero}><FluidHero><div className={`${styles.container} ${fluidStyles.contentLayer}`}><SiteNavigation locale={locale} currentUrl={page.metadata.url} /><Reveal className={styles.heroContent}><p className={styles.eyebrow}>{page.metadata.offer}</p><h1>{h1?.text ?? page.metadata.title}</h1><p className={styles.lead}>{page.metadata.description}</p><div className={styles.heroCopy}><MarkdownContent nodes={heroNodes} cta={page.metadata.cta} onCta={consumeCta} locale={locale} />{heroCta && <ActionLink className={styles.primaryButton} href={diagnosticHref(locale)}>{page.metadata.cta}</ActionLink>}</div></Reveal></div></FluidHero></section><div className={styles.container}><ContentSections nodes={contentNodes} cta={page.metadata.cta} onCta={consumeCta} locale={locale} /><FaqSection content={getFaqContent(locale)} locale={locale} /><div className={styles.cvCta}><ActionLink className={styles.primaryButton} href={getLocalizedPath('/cv', locale)}>{cvLinkLabel}</ActionLink></div></div><SiteFooter locale={locale} currentPath={page.metadata.url} /></main>;
 }

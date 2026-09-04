@@ -1,7 +1,6 @@
-import {ActionLink, Card, Reveal, SectionHeading} from '@/components/ui';
+import {Card, Reveal, SectionHeading} from '@/components/ui';
 import type {MarkdownNode} from '@/lib/site-content';
 import type {SiteLocale} from '@/lib/site-content';
-import {getLocalizedPath} from '@/lib/i18n';
 import {MarkdownContent, MarkdownInline} from './MarkdownContent';
 import type {CtaProps} from './site.types';
 import styles from './site.module.css';
@@ -19,8 +18,7 @@ export function CaseSection({title, nodes, cta, onCta, locale}: CaseSectionProps
     else intro.push(node);
   }
   if (current?.nodes.length || current?.title) groups.push(current);
-  const showCvLink = /^Кейсы/.test(title);
-  return <section className={styles.section}><SectionHeading eyebrow="CASE STUDIES">{title}</SectionHeading>{intro.length > 0 && <div className={styles.caseIntro}><MarkdownContent nodes={intro} cta={cta} onCta={onCta} locale={locale} /></div>}<div className={styles.caseGrid}>{groups.map((group, index) => <Reveal key={group.title ?? index} delay={index * 50}><article className={styles.caseWrap}>{group.title && <h3>{group.title}</h3>}<CaseBody nodes={group.nodes} cta={cta} onCta={onCta} locale={locale} /></article></Reveal>)}</div>{showCvLink && <div className={styles.workCta}><ActionLink className={styles.primaryButton} href={getLocalizedPath('/cv', locale)}>Подробнее в CV</ActionLink></div>}</section>;
+  return <section className={styles.section}><SectionHeading eyebrow="CASE STUDIES">{title}</SectionHeading>{intro.length > 0 && <div className={styles.caseIntro}><MarkdownContent nodes={intro} cta={cta} onCta={onCta} locale={locale} /></div>}<div className={styles.caseGrid}>{groups.map((group, index) => <Reveal key={group.title ?? index} delay={index * 50}><article className={styles.caseWrap}>{group.title && <h3>{group.title}</h3>}<CaseBody nodes={group.nodes} cta={cta} onCta={onCta} locale={locale} /></article></Reveal>)}</div></section>;
 }
 
 function CaseBody({nodes, cta, onCta, locale}: CtaProps & {nodes: MarkdownNode[]; locale: SiteLocale}) {
