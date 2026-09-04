@@ -15,9 +15,12 @@ export type MarkdownNode =
   | {type: 'ordered-list'; items: string[]}
   | {type: 'demo'; text: string};
 export type SitePage = {metadata: PageMetadata; nodes: MarkdownNode[]};
+export type FaqItem = {question: string; answer: string[]};
+export type FaqGroup = {title: string; items: FaqItem[]};
+export type FaqContent = {title: string; groups: FaqGroup[]};
 
 type SiteMessage = {metadata: PageMetadata; body: string};
-type SiteMessages = {site: {pages: Record<string, SiteMessage>}};
+type SiteMessages = {faq: FaqContent; site: {pages: Record<string, SiteMessage>}};
 
 const messages: Record<SiteLocale, SiteMessages> = {
   en: enMessages as SiteMessages,
@@ -68,6 +71,10 @@ function parseMarkdown(body: string): MarkdownNode[] {
   }
   flushParagraph(paragraph, nodes);
   return nodes;
+}
+
+export function getFaqContent(locale: SiteLocale = defaultLocale): FaqContent {
+  return messages[locale].faq;
 }
 
 export function getSitePage(id: SitePageId, locale: SiteLocale = defaultLocale): SitePage {

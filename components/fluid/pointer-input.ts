@@ -7,15 +7,16 @@ export interface StirInput {
   dispose(): void;
 }
 
-export function installStirInput(canvas: HTMLCanvasElement): StirInput {
+export function installStirInput(
+  canvas: HTMLCanvasElement,
+  eventTarget: HTMLElement = canvas
+): StirInput {
   let activePointer: number | undefined;
   let from: [number, number] = [0.5, 0.5];
   let to: [number, number] = [0.5, 0.5];
   let velocity: [number, number] = [0, 0];
   let lastTime = 0;
   let decay = 0;
-  const previousTouchAction = canvas.style.touchAction;
-  canvas.style.touchAction = "none";
 
   const point = (event: PointerEvent): [number, number] => {
     const r = canvas.getBoundingClientRect();
@@ -30,7 +31,7 @@ export function installStirInput(canvas: HTMLCanvasElement): StirInput {
 
   const down = (event: PointerEvent) => {
     if (!event.isPrimary || activePointer !== undefined) return;
-    canvas.setPointerCapture(event.pointerId);
+    eventTarget.setPointerCapture(event.pointerId);
     activePointer = event.pointerId;
     from = to = point(event);
     lastTime = event.timeStamp;
@@ -62,8 +63,8 @@ export function installStirInput(canvas: HTMLCanvasElement): StirInput {
 
   const up = (event: PointerEvent) => {
     if (!event.isPrimary || event.pointerId !== activePointer) return;
-    if (canvas.hasPointerCapture?.(event.pointerId)) {
-      canvas.releasePointerCapture(event.pointerId);
+    if (eventTarget.hasPointerCapture?.(event.pointerId)) {
+      eventTarget.releasePointerCapture(event.pointerId);
     }
     activePointer = undefined;
     decay = 2;
@@ -76,11 +77,11 @@ export function installStirInput(canvas: HTMLCanvasElement): StirInput {
     }
   };
 
-  canvas.addEventListener("pointerdown", down);
-  canvas.addEventListener("pointermove", move);
-  canvas.addEventListener("pointerup", up);
-  canvas.addEventListener("pointercancel", up);
-  canvas.addEventListener("pointerleave", leave);
+  eventTarget.addEventListener("pointerdown", down);
+  eventTarget.addEventListener("pointermove", move);
+  eventTarget.addEventListener("pointerup", up);
+  eventTarget.addEventListener("pointercancel", up);
+  eventTarget.addEventListener("pointerleave", leave);
 
   return {
     get active() {
@@ -103,19 +104,18 @@ export function installStirInput(canvas: HTMLCanvasElement): StirInput {
       }
     },
     dispose() {
-      canvas.removeEventListener("pointerdown", down);
-      canvas.removeEventListener("pointermove", move);
-      canvas.removeEventListener("pointerup", up);
-      canvas.removeEventListener("pointercancel", up);
-      canvas.removeEventListener("pointerleave", leave);
+      eventTarget.removeEventListener("pointerdown", down);
+      eventTarget.removeEventListener("pointermove", move);
+      eventTarget.removeEventListener("pointerup", up);
+      eventTarget.removeEventListener("pointercancel", up);
+      eventTarget.removeEventListener("pointerleave", leave);
       if (
         activePointer !== undefined &&
-        canvas.hasPointerCapture?.(activePointer)
+        eventTarget.hasPointerCapture?.(activePointer)
       ) {
-        canvas.releasePointerCapture(activePointer);
+        eventTarget.releasePointerCapture(activePointer);
       }
       activePointer = undefined;
-      canvas.style.touchAction = previousTouchAction;
     },
   };
 }

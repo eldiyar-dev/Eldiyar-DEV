@@ -1,3 +1,32 @@
 .mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--paper);color:var(--paper);font:600 25px/1 var(--font-mono)}.mark i{position:absolute;right:-1.5px;bottom:-1.5px;width:10px;height:10px;background:var(--signal)}.mark.inverted{border-color:var(--ink);color:var(--ink)}.sectionHeading{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--ink)}.sectionHeading>span{font:12px/1 var(--font-mono);letter-spacing:.14em;color:var(--signal-deep)}.sectionHeading h2{margin:0;font-size:36px;line-height:1.1;font-weight:600;letter-spacing:-.02em}.sectionHeading.dark{border-color:var(--graphite)}.sectionHeading.dark h2{color:var(--paper)}.sectionHeading.dark>span{color:var(--signal)}.reveal{opacity:0;transform:translateY(22px);transition:opacity 620ms var(--ease),transform 620ms var(--ease)}.reveal.visible{opacity:1;transform:none}@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .mark.mark{display:grid;place-items:center;width:35px;height:auto;aspect-ratio:242.092 / 369.58;flex:0 0 auto;border:0;color:inherit}.mark .logo{display:block;width:100%;height:100%;overflow:visible}.mark.inverted{filter:none}
 .brandName{font-family:var(--font-mono)}
+
+/* Keep the section marker beside the first line, even for long titles. */
+.sectionHeading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: first baseline;
+}
+.sectionHeading > span {
+  line-height: 1.4;
+}
+.sectionHeading h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+@media (max-width: 720px) {
+  .sectionHeading {
+    gap: 12px;
+  }
+  .sectionHeading h2 {
+    font-size: clamp(26px, 4.5vw, 32px);
+    line-height: 1.18;
+  }
+  .sectionHeading > span {
+    max-inline-size: 12ch;
+    font-size: 10px;
+    letter-spacing: .1em;
+  }
+}

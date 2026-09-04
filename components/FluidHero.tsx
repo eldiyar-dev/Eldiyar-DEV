@@ -1,6 +1,6 @@
 'use client';
 
-import {type PointerEvent, type ReactNode, useRef} from 'react';
+import {type ReactNode, useState} from 'react';
 import dynamic from 'next/dynamic';
 import styles from './fluid.module.css';
 
@@ -8,24 +8,10 @@ const FluidBackdrop = dynamic(() => import('./fluid/FluidBackdrop'), {ssr: false
 
 /** Layout adapter for the unmodified vgpu interactive-fluid example. */
 export function FluidHero({children}: {children: ReactNode}) {
-  const rootRef = useRef<HTMLDivElement>(null);
-  const relayPointer = (event: PointerEvent<HTMLDivElement>) => {
-    const canvas = rootRef.current?.querySelector('canvas');
-    if (!canvas || event.target === canvas) return;
-    canvas.dispatchEvent(new PointerEvent(event.type, {
-      bubbles: true,
-      buttons: event.buttons,
-      clientX: event.clientX,
-      clientY: event.clientY,
-      isPrimary: event.isPrimary,
-      pointerId: event.pointerId,
-      pointerType: event.pointerType,
-      pressure: event.pressure,
-    }));
-  };
+  const [root, setRoot] = useState<HTMLDivElement | null>(null);
 
-  return <div ref={rootRef} className={styles.fluidRoot} onPointerMoveCapture={relayPointer} onPointerLeave={relayPointer}>
-    <div className={styles.fluidHero} aria-hidden="true"><FluidBackdrop /></div>
+  return <div ref={setRoot} className={styles.fluidRoot}>
+    <div className={styles.fluidHero} aria-hidden="true">{root && <FluidBackdrop inputTarget={root} />}</div>
     {children}
   </div>;
 }

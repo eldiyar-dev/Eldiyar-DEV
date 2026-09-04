@@ -14,6 +14,7 @@ const FIXED_STEP = 1 / 60;
 
 interface RendererOptions {
   canvas: HTMLCanvasElement;
+  inputTarget?: HTMLElement;
 }
 
 function fixedStepCount(accumulator: number, elapsed: number) {
@@ -75,7 +76,7 @@ export function createRenderer(options: RendererOptions) {
     gpu = nextGpu;
     canvasSurface = surface(gpu, options.canvas, { dpr: [1, 2] });
     fluid = createFluid(gpu);
-    input = installStirInput(options.canvas);
+    input = installStirInput(options.canvas, options.inputTarget);
     await prepareFluid(fluid, canvasSurface);
     if (disposed) return;
     canvasSurface.onResize(() => {

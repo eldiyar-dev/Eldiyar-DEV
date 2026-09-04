@@ -3,16 +3,16 @@
 import { useEffect, useRef } from "react";
 import { createRenderer } from "./renderer";
 
-export function Example() {
+export function Example({ inputTarget }: { inputTarget?: HTMLElement }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const renderer = createRenderer({ canvas });
+    const renderer = createRenderer({ canvas, inputTarget });
     void renderer.ready;
     return () => renderer.dispose();
-  }, []);
+  }, [inputTarget]);
 
   return (
     <div className="relative h-full w-full overflow-hidden bg-black">
