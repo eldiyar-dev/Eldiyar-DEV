@@ -109,3 +109,12 @@
     align-content: flex-start;
   }
 }
+
+/* The original compact footer layout sits above the same interactive fluid background as the hero. */
+.footer{position:relative;color:var(--paper);border-color:rgba(250,251,250,.18)}
+.footer a,.footerLinks a{color:var(--signal)}
+.footerBrand{color:var(--paper)!important}
+.footerLinks a:hover{color:var(--paper)}
+.footerLinks a:focus-visible,.footerBrand:focus-visible{outline-color:var(--signal)}
+.footerLink{border-color:rgba(250,251,250,.22)}
+.footerLink:hover{border-color:var(--signal);background:rgba(0,217,157,.12);color:var(--paper)!important}

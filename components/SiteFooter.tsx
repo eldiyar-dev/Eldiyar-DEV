@@ -3,6 +3,8 @@ import {BrandLink} from '@/components/ui';
 import type {SiteLocale} from '@/lib/site-content';
 import {getLocalizedPath} from '@/lib/i18n';
 import {contactHref} from './site.constants';
+import {FluidHero} from './FluidHero';
+import fluidStyles from './fluid.module.css';
 import styles from './site.module.css';
 
 export type SiteFooterProps = {locale: SiteLocale; currentPath?: string};
@@ -10,7 +12,7 @@ export type SiteFooterProps = {locale: SiteLocale; currentPath?: string};
 /** Footer с подтверждёнными публичными контактами и ссылкой на резюме. */
 export function SiteFooter({locale, currentPath = '/'}: SiteFooterProps) {
   const otherLocale = locale === 'ru' ? 'en' : 'ru';
-  return <footer className={`${styles.container} ${styles.footer}`}><BrandLink className={styles.footerBrand} href={getLocalizedPath('/', locale)} inverted label={locale === 'en' ? 'Eldiyar — home' : 'Eldiyar — на главную'} /><nav className={styles.footerLinks} aria-label={locale === 'en' ? 'Contacts and language' : 'Контакты и язык'}><a className={styles.footerLink} href={contactHref}><span>eldiyar.dev@gmail.com</span></a><a className={styles.footerLink} href="https://www.linkedin.com/in/eldiyar-dev/"><FooterIcon type="linkedin" /><span>LinkedIn</span></a><a className={styles.footerLink} href="https://t.me/EldiyarDev"><FooterIcon type="telegram" /><span>Telegram</span></a><Link className={styles.footerLink} href={getLocalizedPath('/cv', locale)}><FooterIcon type="cv" /><span>CV</span></Link><Link className={styles.footerLink} href={getLocalizedPath(currentPath, otherLocale)} aria-label={locale === 'en' ? 'Switch to Russian' : 'Переключить на английский'}>{otherLocale.toUpperCase()}</Link></nav></footer>;
+  return <FluidHero><footer className={`${styles.container} ${styles.footer} ${fluidStyles.contentLayer}`}><BrandLink className={styles.footerBrand} href={getLocalizedPath('/', locale)} inverted label={locale === 'en' ? 'Eldiyar — home' : 'Eldiyar — на главную'} /><nav className={styles.footerLinks} aria-label={locale === 'en' ? 'Contacts and language' : 'Контакты и язык'}><a className={styles.footerLink} href={contactHref}><span>eldiyar.dev@gmail.com</span></a><a className={styles.footerLink} href="https://www.linkedin.com/in/eldiyar-dev/"><FooterIcon type="linkedin" /><span>LinkedIn</span></a><a className={styles.footerLink} href="https://t.me/EldiyarDev"><FooterIcon type="telegram" /><span>Telegram</span></a><Link className={styles.footerLink} href={getLocalizedPath('/cv', locale)}><FooterIcon type="cv" /><span>CV</span></Link><Link className={styles.footerLink} href={getLocalizedPath(currentPath, otherLocale)} aria-label={locale === 'en' ? 'Switch to Russian' : 'Переключить на английский'}>{otherLocale.toUpperCase()}</Link></nav></footer></FluidHero>;
 }
 
 function FooterIcon({type}: {type: 'linkedin' | 'telegram' | 'cv'}) {
