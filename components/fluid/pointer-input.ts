@@ -19,6 +19,10 @@ export function installStirInput(
   let lastTime = 0;
   let decay = 0;
 
+  const isInteractiveTarget = (target: EventTarget | null) =>
+    target instanceof Element &&
+    target.closest('a, button, input, select, textarea, summary, [role="button"], [contenteditable="true"]');
+
   const point = (clientX: number, clientY: number): [number, number] => {
     const r = canvas.getBoundingClientRect();
     return [
@@ -48,7 +52,7 @@ export function installStirInput(
   };
 
   const down = (event: PointerEvent) => {
-    if (!event.isPrimary || activePointer !== undefined) return;
+    if (!event.isPrimary || activePointer !== undefined || isInteractiveTarget(event.target)) return;
     eventTarget.setPointerCapture(event.pointerId);
     activePointer = event.pointerId;
     from = to = point(event.clientX, event.clientY);
@@ -81,6 +85,7 @@ export function installStirInput(
   // Pointer events are cancelled by the browser once a vertical pan becomes a
   // scroll. Passive touch events keep the fluid input alive without blocking it.
   const touchStart = (event: TouchEvent) => {
+    if (isInteractiveTarget(event.target)) return;
     const touch = event.changedTouches[0];
     if (!touch || activeTouch !== undefined) return;
     activeTouch = touch.identifier;
